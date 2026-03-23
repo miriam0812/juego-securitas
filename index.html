@@ -1,56 +1,37 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruleta de Objeciones · Teleclose</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Ruleta Numérica · Teleclose</title>
+  <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-  <header class="topbar">
-    <h1>🎯 Ruleta de Objeciones · <span class="brand">Teleclose</span></h1>
-    <p class="subtitle">Método <strong>GPS</strong>: Guiar · Personalizar · Sellar</p>
-  </header>
-
-  <main class="layout">
-    <section class="wheel-wrap">
-      <div class="pointer">▲</div>
-      <canvas id="wheel" width="520" height="520" aria-label="Ruleta de objeciones"></canvas>
-      <button id="spinBtn" class="primary">Girar</button>
-    </section>
-
-    <section class="panel">
-      <h2>Cómo jugar</h2>
-      <ol>
-        <li>Pulsa <strong>Girar</strong> para seleccionar una objeción al azar.</li>
-        <li>Lee la tarjeta y practica el método <strong>GPS</strong> con tu equipo.</li>
-        <li>Repite cuantas veces quieras. Ideal para roleplay y formación rápida.</li>
-      </ol>
-      <details>
-        <summary>Editar objeciones</summary>
-        <p>Abre <code>script.js</code> y edita el arreglo <code>OBJECTIONS</code> (título y pasos GPS). Puedes añadir o quitar elementos; la ruleta se adapta sola.</p>
-      </details>
-    </section>
-  </main>
-
-  <!-- Modal -->
-  <dialog id="card">
-    <article>
-      <header>
-        <h3 id="cardTitle">Objeción</h3>
-      </header>
-      <div id="cardBody"></div>
-      <footer class="card-actions">
-        <button id="closeCard" class="secondary">Volver a la ruleta</button>
-        <button id="spinAgain" class="primary">Girar de nuevo</button>
-      </footer>
-    </article>
-  </dialog>
-
-  <footer class="footnote">
-    <small>Hecho para <strong>Teleclose</strong> · Método GPS (Guiar, Personalizar, Sellar).</small>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<header class='topbar'>
+  <h1>🎯 Ruleta de Objeciones · <span class='brand'>Teleclose</span> · Números</h1>
+  <p class='subtitle'>Ruleta visual limpia · Objeciones completas al abrir tarjeta</p>
+</header>
+<main class='layout'>
+  <section class='wheel-wrap'>
+    <div class='pointer'>▲</div>
+    <canvas id='wheel' width='560' height='560'></canvas>
+    <button id='spinBtn' class='primary'>Girar</button>
+  </section>
+  <section class='panel'>
+    <h2>Objeciones (clic para ver)</h2>
+    <ol id='legend' class='legend'></ol>
+  </section>
+</main>
+<dialog id='card'>
+  <article>
+    <header><h3 id='cardTitle'></h3></header>
+    <div id='cardBody'></div>
+    <footer class='card-actions'>
+      <button id='closeCard' class='secondary'>Volver</button>
+      <button id='spinAgain' class='primary'>Girar de nuevo</button>
+    </footer>
+  </article>
+</dialog>
+<script src='script.js'></script>
+</body></html>
