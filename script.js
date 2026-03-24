@@ -1,1 +1,1 @@
-console.log('missing')
+<html><body>Error: original missing</body></html>
